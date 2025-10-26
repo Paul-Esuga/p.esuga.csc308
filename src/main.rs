@@ -1,8 +1,9 @@
 mod extra;
-mod testing;
+mod week1;
 
 fn main() {
     extra::hello();
-    testing::test();
+    // testing::test();
+    week1::tasks();
 
 }
