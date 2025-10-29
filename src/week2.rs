@@ -7,6 +7,7 @@ pub fn tasks() {
 	
 	println!("Final message: {}", message);
 
+
 	// Task 2
 	let mut name = String::from("Ada");
 	
@@ -14,6 +15,21 @@ pub fn tasks() {
 	append_title(&mut name);
 	
 	println!("Final name: {}", name);
+
+
+	// Task 3
+	let mut name = String::from("Firstname ");
+	add_surname_to_firstname(&mut name);
+	println!("{name}");
+
+
+	// Task 5
+	let s1 = String::from("Hi");
+	let s2 = String::from("amazing!");
+	
+	let result = longest(&s1, &s2);
+	println!("The longer string is: {}", result);
+
 }
 
 
@@ -35,4 +51,19 @@ fn print_name(n: &String) {
 fn append_title(n: &mut String) {
     n.push_str(" Lovelace");
 }
+
+// Task 3 fucntions
+fn add_surname_to_firstname(name: &mut String) {
+    name.push_str("Lastname");
+}
+
+// Task 5 functions
+fn longest(a: &String, b: &String) -> &String {
+    if a.len() > b.len() {
+        a
+    } else {
+        b
+    }
+}
+
 
